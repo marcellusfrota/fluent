@@ -1,0 +1,9 @@
+#config/routes.yaml
+
+index:
+    path: /
+    controller: App\Controller\HomeController::home
+
+projetos:
+    path: /projetos
+    controller: App\Controller\HomeController::home
