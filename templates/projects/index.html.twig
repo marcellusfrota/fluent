@@ -1,0 +1,81 @@
+{# app/Resources/views/claimants/claimants.html.twig #}
+{% block title %}Boards{% endblock %}
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<section class="content-header">
+
+    <h1>
+        Boards
+        <small></small>
+    </h1>
+
+    <ol class="breadcrumb">
+        <li><a href="{{ path('homepage') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li class="active">Boards</li>
+    </ol>
+
+</section>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/application/js/plugins/datatables/dataTables.bootstrap.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/application/js/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('bundles/application/js/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            // http://legacy.datatables.net/usage/columns#bSortable
+
+            $('#board_list').dataTable({
+                "bPaginate": true,
+                "bLengthChange": true,
+                "bFilter": true,
+                "bSort": true,
+                "bInfo": true,
+                "bAutoWidth": false,
+                // "columns": [
+                //     { "width": "40%" },
+                //     { "width": "30%" },
+                //     { "width": "10%" },
+                //     { "width": "10%" }
+                // ],
+                "aoColumns": [
+                  { "bSortable": true, "width": "30%" },
+                  { "bSortable": true, "width": "20%" },
+                  { "bSortable": true, "width": "20%" },
+                  { "bSortable": false, "width": "20%" },
+                  { "bSortable": false, "width": "10%" },
+                ],
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ boards por página",
+                    "zeroRecords": "Nada encontrado - Desculpe",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "Nenhuma board cadastrada",
+                    "infoFiltered": "(filtrando de _MAX_ Cards)",
+                    "processing": "Procurando boards...",
+                    "search": "Procurar:",
+                    "infoPostFix":    "",
+                    "loadingRecords": "Carregando lista de boards...",
+                    "emptyTable":     "Não há dados disponíveis na tabela",
+                    "paginate": {
+                        "first":      "Primeira",
+                        "previous":   "Anterior",
+                        "next":       "Próxima",
+                        "last":       "Última"
+                    },
+                    "aria": {
+                        "sortAscending":  ":Permite classificar a coluna em ordem crescente",
+                        "sortDescending": ":Permite classificar a coluna em ordem decrescente"
+                    }                
+                },
+                "responsive": true
+            });
+
+        });
+    </script>    
+{% endblock %}

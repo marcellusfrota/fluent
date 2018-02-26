@@ -6,6 +6,11 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+
+		{% if is_granted('ROLE_ADMIN') %}
+		    <a href="...">Delete</a>
+		{% endif %}
+    	
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

@@ -1,9 +1,12 @@
 #config/routes.yaml
 
-index:
-    path: /
-    controller: App\Controller\HomeController::home
+# index:
+#     path: /
+#     controller: App\Controller\DefaultController::indexAction
 
-projetos:
-    path: /projetos
-    controller: App\Controller\HomeController::home
+# projetos:
+#     path: /projetos
+#     controller: App\Controller\ProjectsController::indexAction
+
+logout:
+    path: /logout
