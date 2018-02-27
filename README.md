@@ -26,6 +26,7 @@ Instala as dependências
 Cria o banco inicial
 
 > php bin/console doctrine:migrations:diff
+
 > php bin/console doctrine:migrations:migrate
 
 Atualiza a estrutura do banco de acordo com as Entities.
