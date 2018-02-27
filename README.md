@@ -15,17 +15,26 @@ Sempre!
 
 Dicas & Macetes
 =
-#### Comandos Fluent:
+#### Instalação:
 
 > composer install
 
 Instala as dependências
 
+> php bin/console doctrine:database:create
+
+Cria o banco inicial
+
+> php bin/console doctrine:migrations:diff
+> php bin/console doctrine:migrations:migrate
+
+Atualiza a estrutura do banco de acordo com as Entities.
+
 > php bin/console doctrine:fixtures:load
 
 Carrega dados iniciais, por enquanto apenas um usuário: admin/admin
 
-#### Para FrontEnd
+#### Para FrontEnd:
 
 https://symfony.com/doc/current/frontend.html 
 
