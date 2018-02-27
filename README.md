@@ -38,26 +38,15 @@ Habilitar no php.ini
 O que há por dentro?
 =
   * Symfony 4;
-  * Twig;
-  * Doctrine ORM/DBAL;
-  * Swiftmailer;
+  * [Doctrine ORM/DBAL][1];
+  * [Swiftmailer][4];
   * Annotations habilitado pra TUDO;
-  * [SensioFrameworkExtraBundle][6];
-    template and routing annotation capability
-  * [DoctrineBundle][7];
-  * [TwigBundle][8];
-  * [SecurityBundle][9];
-  * [MonologBundle][11];
-  * **WebProfilerBundle** (in dev/test env);
-  * **SensioDistributionBundle** (in dev/test env);
-  * [SensioGeneratorBundle][13] (in dev/test env);
-  * **DebugBundle** (in dev/test env);
+  * [Twig][2];
+  * [SecurityBundle][3];
+  * [MonologBundle][5];
 
-[1]:  https://symfony.com/doc/current/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/current/doctrine.html
-[8]:  https://symfony.com/doc/current/templating.html
-[9]:  https://symfony.com/doc/current/security.html
-[10]: https://symfony.com/doc/cookbook/email.html
-[11]: https://symfony.com/doc/cookbook/logging/monolog.html
-[13]: https://symfony.com/doc/bundles/SensioGeneratorBundle/index.html
+[1]:  https://symfony.com/doc/current/doctrine.html
+[2]:  https://symfony.com/doc/current/templating.html
+[3]:  https://symfony.com/doc/current/security.html
+[4]: https://symfony.com/doc/cookbook/email.html
+[5]: https://symfony.com/doc/cookbook/logging/monolog.html
