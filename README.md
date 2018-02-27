@@ -11,39 +11,29 @@ Bem vindo ao Fluent (Delta)
 O **Fluent** é um gerenciador de atividades inicialmente desenvolvido por Marcellus Frota.
 
 # Quando será atualizado?
-Sempre !
+Sempre!
 
 Dicas & Macetes
 =
 #### Comandos Fluent:
 
-> composer update
+> composer install
+
+Instala as dependências
+
+> php bin/console doctrine:fixtures:load
+
+Carrega dados iniciais, por enquanto apenas um usuário: admin/admin
+
+#### Para FrontEnd
+
+https://symfony.com/doc/current/frontend.html 
 
 #### TODO/Lembretes
 
 Habilitar no php.ini
 
 > ``` ;extension=php_fileinfo.dll ```
-
-#### Comandos Doctrine
-
->  ``` php bin/console doctrine:generate:entity ```
-
-*Quando pedir o nome coloque: Fluent:NomeDaEntidade;*
-
-*Quando quiser encerrar basta dar Enter quando perguntar pelo próximo campo;*
-
->  ``` php bin/console doctrine:schema:update --force ```
-
-*Esse comando atualiza o banco de acordo com as Entities;*
-
-> ``` php bin/console generate:doctrine:form Fluent:Card ```
-
-*Gera os formulários dentro de src/Fluent/Form;*
-
-> ``` php bin/console generate:doctrine:crud --entity=Fluent:Board ```
-
-*Gera Controller e Forms <3;*
 
 O que há por dentro?
 =
