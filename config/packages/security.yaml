@@ -1,5 +1,8 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    role_hierarchy:
+        ROLE_SUPER_ADMIN:   [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_ADMIN:         [ROLE_USER]
     providers:
         in_memory: 
             memory:
@@ -10,11 +13,18 @@ security:
                     user:
                         password: $2y$12$QnPvWs44FXLGnCTZQB4oMunM/68sYTaHvrkmLoqWW3yKudJL/WYhS
                         roles: 'ROLE_USER'
+        fluent_db:
+            entity:
+                class: App\Entity\User
+                property: username
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
+            pattern: ^/
+            http_basic: ~
+            provider: fluent_db
             anonymous: true
             form_login:
                 always_use_default_target_path: true
@@ -23,6 +33,9 @@ security:
             logout:
                 path:   /logout
                 target: /
+        # default:
+        #     anonymous: ~
+        #     http_basic: ~
 
             # activate different ways to authenticate
 
@@ -36,6 +49,7 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        # - { path: ^/register, roles: ROLE_ADMIN }
         - { path: ^/, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
 
@@ -44,3 +58,8 @@ security:
         Symfony\Component\Security\Core\User\User:
             algorithm: bcrypt
             cost: 12
+        # If you are running PHP 7.2+ or have the libsodium extension installed, 
+        # then the recommended hashing algorithm to use is Argon2i.
+        App\Entity\User:
+            algorithm: bcrypt
+
