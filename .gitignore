@@ -20,6 +20,7 @@
 .web-server-pid
 ###< symfony/web-server-bundle ###
 
-###> lista de comandos ###
+###> lixo ###
+/_source/
 lista.txt
-###< lista de comandos ###
+###< lixo ###
