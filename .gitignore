@@ -1,26 +1,49 @@
 
-###> symfony/framework-bundle ###
+# symfony/framework-bundle
 .env
 /public/bundles/
-/var/
 /vendor/
-###< symfony/framework-bundle ###
 
-###> symfony/webpack-encore-pack ###
+# symfony/webpack-encore-pack
 /node_modules/
 /public/build/
-###< symfony/webpack-encore-pack ###
 
-###> symfony/phpunit-bridge ###
+# symfony/phpunit-bridge
 .phpunit
 /phpunit.xml
-###< symfony/phpunit-bridge ###
 
-###> symfony/web-server-bundle ###
+# symfony/web-server-bundle
 .web-server-pid
-###< symfony/web-server-bundle ###
 
-###> lixo ###
+# lixo
 /_source/
 /lista.txt
-###< lixo ###
+
+# Cache, session files and logs (Symfony3)
+/var/cache/*
+/var/logs/*
+/var/sessions/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+!var/sessions/.gitkeep
+
+# Parameters
+/app/config/parameters.yml
+/app/config/parameters.ini
+
+# Assets and user uploads
+/web/bundles/
+/web/uploads/
+
+# PHPUnit
+/app/phpunit.xml
+/phpunit.xml
+
+# Build data
+/build/
+
+# Composer PHAR
+/composer.phar
+
+# Embedded web-server pid file
+/.web-server-pid

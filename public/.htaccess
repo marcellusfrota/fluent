@@ -48,6 +48,10 @@ DirectoryIndex index.php
     RewriteCond %{ENV:REDIRECT_STATUS} ^$
     RewriteRule ^index\.php(?:/(.*)|$) %{ENV:BASE}/$1 [R=301,L]
 
+    # For all URL starting with /css, /fonts, /img or /js
+    RewriteCond %{REQUEST_URI} ^/?(css|fonts|img|js)(/.*)?$ [NC]
+    RewriteRule ^.*$ /public/%1%2 [L]
+
     # If the requested filename exists, simply serve it.
     # We only want to let Apache serve files and not directories.
     RewriteCond %{REQUEST_FILENAME} -f
