@@ -1,0 +1,126 @@
+<ul class="sidebar-menu" data-widget="tree">
+<li class="header">NAVEGAÇÃO PRINCIPAL</li>
+    <li class="active">
+      <a href="{{ path('dashboard') }}"><i class='fa fa-dashboard'></i> <span>Dashboard</span></a>
+    </li>
+
+    <!-- li>
+        <a href="#">
+            <i class="fa fa-calendar"></i> <span>Calendário</span>
+            <span class="pull-right-container">
+            <small class="label pull-right bg-blue">3</small>
+        </span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#">
+            <i class="fa fa-envelope"></i> <span>Mensagens</span>
+            <span class="pull-right-container">
+            <small class="label pull-right bg-yellow">3</small>
+        </span>
+        </a>
+    </li -->
+
+    <li class="treeview">
+        <a href="#">
+            <i class='fa fa-black-tie'></i> 
+            <span>Solicitantes</span>
+            <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-eye"></i> Ver todos</a></li>
+            <li><a href=""><i class="fa fa-plus-circle"></i> Adicionar</a></li>
+        </ul>
+    </li>             
+
+    <li class="treeview">
+        <a href="#">
+            <i class='fa fa-briefcase'></i> 
+            <span>Projetos</span>
+            <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-eye"></i> Ver todos</a></li>
+            <li><a href=""><i class="fa fa-plus-circle"></i> Adicionar</a></li>
+        </ul>
+    </li>
+
+    <li class="treeview">
+        <a href="#">
+            <i class='fa fa-desktop'></i> 
+            <span>Boards</span>
+            <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-eye"></i> Ver todos</a></li>
+            <li><a href=""><i class="fa fa-plus-circle"></i> Adicionar</a></li>
+        </ul>
+    </li> 
+
+    <li class="treeview">
+        <a href="#">
+            <i class='fa fa-edit'></i> 
+            <span>Cards</span>
+            <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-eye"></i> Ver todos</a></li>
+            <li><a href=""><i class="fa fa-plus-circle"></i> Adicionar</a></li>
+        </ul>
+    </li> 
+
+    <!-- li class="treeview">
+        <a href="#">
+            <i class='fa fa-wrench'></i> 
+            <span>Ferramentas</span>
+            <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="#"><i class='fa fa-bar-chart'></i> <span>Relatórios</span></a></li>
+            <li><a href="#"><i class='fa fa-database'></i> <span>Backup</span></a></li>
+        </ul>
+    </li -->
+
+    {% if is_granted('ROLE_ADMIN') %}
+    <!-- li class="treeview">
+        <a href="#">
+            <i class='fa fa-users'></i> 
+            <span>Usuários</span>
+            <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-eye"></i> Ver todas</a></li>
+            <li><a href="#"><i class="fa fa-plus-circle"></i> Adicionar</a></li>
+        </ul>
+    </li -->                        
+    {% endif %}
+
+    <li class="treeview">
+        <a href="#">
+            <i class='fa fa-info-circle'></i> 
+            <span>Sobre</span>
+            <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+        </span>
+        </a>
+        <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-question"></i> Ajuda</a></li>
+            <li><a href=""><i class="fa fa-info"></i> Sobre o Fluent</a></li>
+            <li><a href=""><i class="fa fa-book"></i> Documentação</a></li>
+        </ul>
+    </li>
+</ul>
+        
